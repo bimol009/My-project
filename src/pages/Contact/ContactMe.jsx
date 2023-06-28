@@ -43,7 +43,9 @@ const ContactMe = () => {
 
   return (
     <section id="contact" className="py-12">
+      <div className="pt-10">
       <SectionTitle subHeading={"Contact Me"}></SectionTitle>
+      </div>
       <div className="grid grid-cols-1">
         <div className="img-section-con flex justify-center items-center">
             <img className="h-screen" src="https://i.ibb.co/yPJsdXQ/5124556-removebg-preview.png" alt="" />
