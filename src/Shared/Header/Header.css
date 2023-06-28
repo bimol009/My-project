@@ -1,0 +1,63 @@
+.icon {
+  cursor: pointer;
+}
+
+.nav-btn {
+  transition: scale 0.2 ease;
+}
+.nav-btn:active {
+  transition: scale 0.9;
+}
+
+
+
+
+
+
+.nav-links ul li {
+
+  margin-right: 60px;
+ 
+ 
+}
+
+.nav-links ul li a{
+    font-weight: bold;
+    
+}
+
+.dropdown-menu ul li {
+  background-color: #090101;
+  border-bottom: 1px solid yellow;
+  width: 150px;
+  text-align: center;
+  border-radius: 10px;
+}
+.dropdown-menu ul li a {
+  color: #fff;
+}
+
+/* Header.css */
+
+/* Mobile styles */
+/* @media (max-width: 767px) {
+    .navbar {
+      width: 100%;
+    }
+       
+  } */
+
+/* Desktop styles */
+/* @media (min-width: 768px) {
+    .nav-links {
+      display: flex;
+    }
+    
+    .icon {
+      display: none;
+    }
+    
+    .nav-btn {
+      margin-left: 1rem;
+    }
+  } */

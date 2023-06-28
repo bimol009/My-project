@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.dark-theme {
+  background: linear-gradient(to bottom, #080a0d, #0d1421);
+color: #ffffff;
+  }
+  
+
+  .white-theme {
+    background: linear-gradient(to bottom, #fce6f5, #c7e8ff);
+color: #333333;
+  }
+
+  

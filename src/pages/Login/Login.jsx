@@ -1,0 +1,142 @@
+
+import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../Provider/AuthProvider';
+import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+
+const Login = () => {
+  const { signIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state?.from.pathname || "/";
+
+  const [showPassword, setShowPassword] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const handleLogin = (data) => {
+    const { email, password } = data;
+  
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+     
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "User Log in Successfully",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        navigate("/");
+      })
+      .catch((error) => {
+    
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: "Failed to log in",
+          text: error.message,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+
+      <div className="w-full max-w-md">
+        <h1 className="text-3xl font-bold text-center mb-8">Login now!</h1>
+        <form
+          onSubmit={handleSubmit(handleLogin)}
+          className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        >
+          <div className="mb-4">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              className={`appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                errors.email ? "border-red-500" : ""
+              }`}
+              {...register("email", { required: true })}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-xs mt-1">Email is required</p>
+            )}
+          </div>
+          <div className="mb-6">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="password"
+            >
+              Password
+            </label>
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                id="password"
+                placeholder="Password"
+                className={`appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                  errors.password ? "border-red-500" : ""
+                }`}
+                {...register("password", { required: true })}
+              />
+              <button
+                type="button"
+                className="absolute top-0 right-0 mt-2 mr-2 text-sm text-gray-500 focus:outline-none"
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? <FaEye /> : <FaEyeSlash />}
+              </button>
+            </div>
+            {errors.password && (
+              <p className="text-red-500 text-xs mt-1">Password is required</p>
+            )}
+          </div>
+          <div className="flex items-center justify-between">
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Login
+            </button>
+            <Link
+              to="/register"
+              className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+            >
+              Create an Account
+            </Link>
+          </div>
+        </form>
+        <div className="bg-white shadow-md rounded px-8 pt-6 pb-8">
+          <p className="text-center">Or login with:</p>
+          <SocialLogin />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
