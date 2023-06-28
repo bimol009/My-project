@@ -22,7 +22,7 @@ const Header = () => {
           : "dark-theme"
       }`}
     >
-      <div className="navbar bg-gradient-to-r from-gray-200 to-white text-black z-10 fixed rounded shadow-md mb-5">
+      <div className="navbar py-8 bg-gradient-to-r from-gray-200 to-white text-black z-10 fixed rounded shadow-md mb-5">
         <div className="nav-title text-3xl font-bold  me-auto hover:text-gray-200">
           <Link to="/">Bimol</Link>
         </div>
