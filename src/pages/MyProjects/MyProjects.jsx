@@ -6,8 +6,8 @@ import "./MyProject.css";
 
 const MyProjects = () => {
   return (
-    <div className="px-8 rounded-lg" id="project">
-      <div className="py-10">
+    <div className=" rounded-lg" id="project">
+      <div className="">
         <SectionTitle subHeading={"My Projects Section"}></SectionTitle>
       </div>
       {/* First Project */}

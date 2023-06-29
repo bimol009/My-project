@@ -1,11 +1,11 @@
 .box-cover{
     height: 500px;
-    width: 90%;
+
     background-color: #000;
     background-position: top;
     transition: ease-in-out 8s;   
-    margin-right: 20px;
-    margin-top: 10px;
+
+    margin-bottom: 10px;
 }
 
 

@@ -1,7 +1,7 @@
 .skill-slide{
     position: relative;
-    width: 260px;
-    height: 260px;
+    width: 200px;
+    height: 200px;
     margin: 200px auto;
     transform-style: preserve-3d;
     animation: rotate 30s linear infinite;
@@ -31,6 +31,8 @@
     box-shadow: 2px 5px 10px #000;
     transform: translate(-50%, -50%);
   }
+
+
 
 
 
