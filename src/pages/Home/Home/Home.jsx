@@ -4,9 +4,10 @@ import Contact from "../../Contact/Contact";
 import MyProjects from "../../MyProjects/MyProjects";
 
 const Home = () => {
+  
   return (
     <div>
-      <div>
+      <div className="container mx-auto">
         <Banner></Banner>
         <AboutMe></AboutMe>
         <MyProjects></MyProjects>

@@ -3,6 +3,7 @@ import SectionTitle from "../../components/SectionTile/SectionTitle";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollAnimation from "react-animate-on-scroll";
+import './About.css'
 
 const About = () => {
   const navHandler = () => {
@@ -17,7 +18,7 @@ const About = () => {
       <SectionTitle subHeading={"About Me"}></SectionTitle>
     
   
-        <div className="img-part flex justify-center pb-10">
+        <div className="img-sec flex justify-center pb-10">
           <img
               src="https://i.ibb.co/YLh76RD/248672140-237903104922971-3040476626125467773-n-removebg-preview-1.png"
               alt=""
@@ -39,7 +40,7 @@ const About = () => {
 
    
       <p
-     className="text-3xl text-black px-20 text-center mt-8"
+     className="text-3xl text-black px-20 text-center ptag mt-8 py-10"
      style={{
         height: "400px",
         width: "90%", 

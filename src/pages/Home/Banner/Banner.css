@@ -1,3 +1,14 @@
-.img-part img{
+
+
+
+.img-part img {
     width: 100%;
+    background: linear-gradient(to right, #fce6f5, #c7e8ff);
+	border-radius: 12rem 10rem 2rem 20rem;
+	height: 30rem;
+	overflow: hidden;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	box-shadow: 2px 5px 10px #000;
+
 }

@@ -1,23 +1,22 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import SectionTitle from "../../components/SectionTile/SectionTitle";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import Swal from "sweetalert2";
-import emailjs from "@emailjs/browser";
-import ScrollAnimation from "react-animate-on-scroll";
+import  emailjs  from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_y2zdjfp",
-        "template_9116a9q",
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
         form.current,
-        "jhKkGj9txNQb03tOI"
+        "YOUR_USER_ID"
       )
       .then(
         (result) => {
@@ -25,76 +24,89 @@ const Contact = () => {
           Swal.fire({
             position: "top-end",
             icon: "success",
-            title: "Successfully send email",
+            title: "Email sent successfully",
             showConfirmButton: false,
             timer: 1500,
           });
         },
         (error) => {
           console.log(error.text);
+          Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: "Failed to send email",
+            showConfirmButton: false,
+            timer: 1500,
+          });
         }
       );
 
     form.current.reset();
+    setIsButtonDisabled(true);
   };
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  const handleInputChange = () => {
+    const inputs = Array.from(form.current.querySelectorAll("input"));
+    const isFormValid = inputs.every((input) => input.value.trim() !== "");
+
+    setIsButtonDisabled(!isFormValid);
+  };
 
   return (
     <section id="contact" className="py-12">
-      <div className="py-10">
-      <SectionTitle subHeading={"Contact Me"}></SectionTitle>
-      </div>
-      <div className="container mx-auto bg-banner-bg bg-no-repeat rounded-lg max-w-[800px] w-full">
-        <h2 className="text-3xl font-bold text-center mb-8 text-white">Contact</h2>
-        <div className="mx-auto">
-          <div className="p-8 max-w-xl mx-auto">
-            <ScrollAnimation animateIn="animate__fadeInTopLeft">
-              <form ref={form} onSubmit={sendEmail}>
-                <div className="mb-4">
-                  <label htmlFor="name" className="block font-bold text-white mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="user_name"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="email" className="block font-bold text-white mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="user_email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="message" className="block font-bold text-white mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows="5"
-                    name="message"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="btn-block bg-slate-800 hover:bg-blue-600 text-white py-3 px-6 rounded-md text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-md transition-colors duration-300"
-                >
-                  Send Email
-                </button>
-              </form>
-            </ScrollAnimation>
-          </div>
+      <div className="container mx-auto">
+        <SectionTitle subHeading="Get in touch with us" />
+        <div className="max-w-xl mx-auto rounded-lg shadow-md py-8 px-6">
+          <form ref={form} onSubmit={sendEmail}>
+            <div className="mb-4">
+              <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="user_name"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
+                required
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="user_email"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
+                required
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="message" className="block text-gray-700 font-bold mb-2">
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows="5"
+                name="message"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
+                required
+                onChange={handleInputChange}
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              disabled={isButtonDisabled}
+              className={`${
+                isButtonDisabled ? "bg-gray-400 cursor-not-allowed w-full" : "bg-blue-500 hover w-full :bg-blue-600 w-full"
+              } text-white py-3 px-6 rounded-md text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-md transition-colors duration-300`}
+            >
+              Send Email
+            </button>
+          </form>
         </div>
       </div>
     </section>

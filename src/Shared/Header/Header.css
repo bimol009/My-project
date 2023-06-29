@@ -17,6 +17,13 @@
 .nav-links ul li {
 
   margin-right: 60px;
+  cursor: pointer;
+ 
+ 
+}
+.nav-links ul {
+
+  display: flex;
  
  
 }

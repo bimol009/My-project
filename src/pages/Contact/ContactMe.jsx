@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Swal from "sweetalert2";
@@ -7,6 +7,7 @@ import SectionTitle from "../../components/SectionTile/SectionTitle";
 
 const ContactMe = () => {
   const form = useRef();
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -34,7 +35,14 @@ const ContactMe = () => {
         }
       );
 
-    form.current.reset();
+      form.current.reset();
+      setIsButtonDisabled(true);
+  };
+  const handleInputChange = () => {
+    const inputs = Array.from(form.current.querySelectorAll("input"));
+    const isFormValid = inputs.every((input) => input.value.trim() !== "");
+
+    setIsButtonDisabled(!isFormValid);
   };
 
   useEffect(() => {
@@ -63,6 +71,7 @@ const ContactMe = () => {
                   type="text"
                   id="name"
                   required
+                  onChange={handleInputChange}
                   name="user_name"
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
                 />
@@ -75,6 +84,7 @@ const ContactMe = () => {
                   type="email"
                   id="email"
                   required
+                  onChange={handleInputChange}
                   name="user_email"
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
                 />
@@ -87,13 +97,17 @@ const ContactMe = () => {
                   id="message"
                   rows="5"
                   required
+                  onChange={handleInputChange}
                   name="message"
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="btn-block bg-slate-800 hover:bg-blue-600 text-white py-3 px-6 rounded-md text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-md transition-colors duration-300"
+                disabled={isButtonDisabled}
+                className={`${
+                  isButtonDisabled ? "bg-gray-400 cursor-not-allowed btn-block" : "bg-blue-500 hover btn-block:bg-blue-600 btn-block"
+                } text-white py-3 px-6 rounded-md text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-md transition-colors duration-300`}
               >
                 Send Email
               </button>

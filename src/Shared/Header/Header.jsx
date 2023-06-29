@@ -1,8 +1,10 @@
 import { FaBars, FaLightbulb, FaRegLightbulb } from "react-icons/fa";
 import { useContext } from "react";
 import "./Header.css";
-import { Link, useLocation } from "react-router-dom";
+
+import { useLocation } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const { darkTheme, setDarkTheme } = useContext(AuthContext);
@@ -12,8 +14,46 @@ const Header = () => {
     setDarkTheme((theme) => !theme);
   };
 
+  const header = (
+
+    <>
+               <li>
+                <Link activeClass="active" to="NavSection" spy={true} smooth={true} className="text-lg text-black hover:text-gray-200">
+                Home
+                </Link>
+              </li>
+         
+
+            <li>
+             <Link to="aboutSection" spy={true} smooth={true} className="text-lg text-black hover:text-gray-200">
+             
+             About
+             </Link>
+            </li>
+
+            <li>
+              <Link to="banner" spy={true} smooth={true} className="text-lg text-black hover:text-gray-200">
+                Banner
+              </Link>
+            </li>
+            <li>
+              <Link to="project" spy={true} smooth={true} className="text-lg text-black hover:text-gray-200">
+                Project
+              </Link>
+            </li>
+
+            <li>
+              <Link to="contact" spy={true} smooth={true} className="text-lg text-black hover:text-gray-200">
+                Contact
+              </Link>
+            </li>
+    </>
+
+  );
+
   return (
     <div
+    id="NavSection"
       className={`${
         darkTheme
           ? "dark-theme"
@@ -22,53 +62,19 @@ const Header = () => {
           : "dark-theme"
       }`}
     >
-      <div className="navbar py-8 bg-gradient-to-r from-gray-200 to-white text-black z-10 fixed rounded shadow-md mb-5">
-        <div className="nav-title text-3xl font-bold  me-auto hover:text-gray-200">
-          <Link to="/">Bimol</Link>
+      <div
+        className="navbar py-8 bg-gradient-to-r from-gray-200 to-white text-black rounded fixed z-10 shadow-md mb-5"
+        id="navbarSection"
+      >
+        <div className="nav-title text-3xl font-bold cursor-pointer  me-auto hover:text-gray-200">
+          <a href="/">
+            Bimol
+          </a>
         </div>
         <div className="nav-links mx-auto hidden md:block">
           <ul className="flex gap-5">
-            <Link to="/">
-              <li>
-                <a href="#" className="text-lg text-black hover:text-gray-200">
-                  Home
-                </a>
-              </li>
-            </Link>
-            <Link to="/about">
-              <li>
-                <a href="#" className="text-lg text-black hover:text-gray-200">
-                  About
-                </a>
-              </li>
-            </Link>
-
-            <li>
-              <a href="#" className="text-lg text-black hover:text-gray-200">
-                Services
-              </a>
-            </li>
-            <Link to="/contactMe">
-              <li>
-                <a href="#" className="text-lg text-black hover:text-gray-200">
-                  Contact
-                </a>
-              </li>
-            </Link>
-            <Link to="/login">
-              <li>
-                <a href="#" className="text-lg text-black hover:text-gray-200">
-                  Login
-                </a>
-              </li>
-            </Link>
-            <Link to="/register">
-              <li>
-                <a href="#" className="text-lg text-black hover:text-gray-200">
-                  Registration
-                </a>
-              </li>
-            </Link>
+         
+             {header}
           </ul>
         </div>
         {location.pathname === "/" && (
@@ -91,41 +97,7 @@ const Header = () => {
 
           <div className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
             <ul>
-              <Link to="/">
-                <li>
-                  <a
-                    href="#"
-                    className="text-lg text-black hover:text-gray-200"
-                  >
-                    Home
-                  </a>
-                </li>
-              </Link>
-              <Link to="/about">
-                <li>
-                  <a
-                    href="#"
-                    className="text-lg text-black hover:text-gray-200"
-                  >
-                    About
-                  </a>
-                </li>
-              </Link>
-              <li>
-                <a href="#" className="text-lg text-black hover:text-gray-200">
-                  Services
-                </a>
-              </li>
-              <Link to="/contactMe">
-                <li>
-                  <a
-                    href="#"
-                    className="text-lg text-black hover:text-gray-200"
-                  >
-                    Contact
-                  </a>
-                </li>
-              </Link>
+            {header}
             </ul>
           </div>
         </div>
