@@ -1,0 +1,44 @@
+.skill-slide{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    margin: 200px auto;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+    box-shadow: 2px 5px 10px #000;
+}
+
+.skill-slide span{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+    
+}
+.skill-slide span img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    border-radius:2rem 4rem 10rem 10rem;
+    transition: 2s;
+    left: 50%;
+    top: 50%;
+    box-shadow: 2px 5px 10px #000;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
