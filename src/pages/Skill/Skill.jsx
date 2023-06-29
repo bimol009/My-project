@@ -45,7 +45,7 @@ const Skill = () => {
       </ScrollAnimation>
 
       <div className="technology">
-        <div className="my-skill px-4">
+        <div className="my-skill px-10">
           <h2>
             <span className="font-bold text-3xl">frontent :</span>
           </h2>

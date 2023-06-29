@@ -18,7 +18,7 @@ const Banner = () => {
   return (
     <div id="banner">
       <ParticlesBackground></ParticlesBackground>
-      <div className="banner-section pt-28 py-5 rounded ">
+      <div className="banner-section px-12 pt-28 py-5 rounded ">
         <div className="banner-content grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center items-center">
           <div className="content-part text-center">
             <h1 className="static-part text-6xl font-bold  mb-2">
