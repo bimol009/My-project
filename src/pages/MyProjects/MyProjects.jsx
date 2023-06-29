@@ -14,7 +14,7 @@ const MyProjects = () => {
       <div className="py-5">
         <SectionTitle subHeading={"My First Projects"}></SectionTitle>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 items-center">
         <ScrollAnimation animateIn="animate__backInLeft">
           <div className="box-cover box rounded-lg"></div>
         </ScrollAnimation>
