@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import  ScrollAnimation  from 'react-animate-on-scroll';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black">
+    <ScrollAnimation animateIn="animate__backInDown">
+      <footer className="bg-gradient-to-b from-gray-900 to-black">
       <div className="py-10 text-center">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
           <Link to="/" className="text-white text-lg hover:text-gray-200">
@@ -58,6 +60,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </ScrollAnimation>
   );
 };
 

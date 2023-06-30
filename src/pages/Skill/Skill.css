@@ -46,19 +46,25 @@
 } */
 
 
-  
+html {
+
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
  
   
 .container {
     max-width: 124rem;
     padding: 4rem 1rem;
     margin: 0 auto;
+   
   }
   
   .swiper_container {
     height: 70vh;
     padding: 2rem 0;
     position: relative;
+   
   }
   
   .swiper-slide {
@@ -74,6 +80,7 @@
     object-fit: cover;
     
   }
+  
 
   @media screen and (max-width: 768px) {
     .swiper-slide img {
@@ -83,7 +90,7 @@
     }
  
   }
-  /* <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border hover:bg-indigo-500 hover:text-white`}> */
+  
   
   .slider-controler {
     position: relative;
@@ -131,4 +138,5 @@
   .swiper-pagination .swiper-pagination-bullet-active {
     background: var(--primary);
   }
+  
   

@@ -3,6 +3,7 @@ import SectionTitle from "../../components/SectionTile/SectionTitle";
 
 import Swal from "sweetalert2";
 import  emailjs  from '@emailjs/browser';
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const form = useRef();
@@ -54,6 +55,10 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-12">
+        <Helmet>
+          <title>MY PORTFOLIO | CONTACT</title>
+          <link rel="canonical" href="https://www.tacobell.com/" />
+        </Helmet>
       <div className="container mx-auto">
         <SectionTitle subHeading="Get in touch with us" />
         <div className="max-w-xl mx-auto rounded-lg shadow-md py-8 px-6">

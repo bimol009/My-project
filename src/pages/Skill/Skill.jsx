@@ -46,22 +46,22 @@ const Skill = () => {
           <img src="https://i.ibb.co/q59PggP/2400-1260-rw-blog-node-js.png" alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/c2MxRL1/19199360.jpg" alt="slide_image" />
+          <img src="https://i.ibb.co/c2MxRL1/19199360.jpg" alt="slide_image" className="rounded-t-lg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/LZjt2RP/javascript-logo.png" alt="slide_image" />
+          <img src="https://i.ibb.co/LZjt2RP/javascript-logo.png" alt="slide_image" className="rounded-t-lg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/WKwx633/download-2.png" alt="slide_image" />
+          <img src="https://i.ibb.co/WKwx633/download-2.png" alt="slide_image" className="rounded-t-lg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/rpLYszg/image-blog-openlogic-what-is-mongodb.png" alt="slide_image" />
+          <img src="https://i.ibb.co/rpLYszg/image-blog-openlogic-what-is-mongodb.png" alt="slide_image" className="rounded-t-lg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/pZM4FbV/tail.png" alt="slide_image" />
+          <img src="https://i.ibb.co/pZM4FbV/tail.png" alt="slide_image" className="rounded-t-lg"/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/DKGZR39/Json-web-token.jpg" alt="slide_image" />
+          <img src="https://i.ibb.co/DKGZR39/Json-web-token.jpg" alt="slide_image" className="rounded-t-lg" />
         </SwiperSlide>
 
         <div className="slider-controler">
