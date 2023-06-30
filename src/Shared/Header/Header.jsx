@@ -83,16 +83,16 @@ const Header = () => {
           </ul>
         </div>
         {location.pathname === "/" && (
-          <Link
-            onClick={toggleTheme}
-            className=" font-bold text-base text-black mr-6 cursor-pointer"
-          >
-            {darkTheme ? (
-              <FaSun size={30} />
-            ) : (
-              <FaMoon size={30} />
-            )}
-          </Link>
+           <Link
+           onClick={toggleTheme}
+           className="font-bold text-base mr-6 cursor-pointer"
+         >
+           {darkTheme ? (
+             <FaSun size={30} className="text-yellow-500" />
+           ) : (
+             <FaMoon size={30} className="text-gray-500" />
+           )}
+         </Link>
         )}
 
 <div className="dropdown dropdown-end cursor-pointer text-2xl font-bold text-black">
