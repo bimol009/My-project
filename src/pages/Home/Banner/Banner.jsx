@@ -60,7 +60,7 @@ const Banner = () => {
               alt=""
             />
           </div>
-          <ScrollAnimation animateIn="animate__rollIn">
+          <ScrollAnimation animateIn="animate__pulse">
           <div className="grid grid-flow-col gap-4">
             <a
               href="https://www.facebook.com/bimol.sarker.56/"

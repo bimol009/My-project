@@ -18,7 +18,7 @@ const Skill = () => {
       <div className="mb-10">
         <SectionTitle subHeading="My Skill" />
       </div>
-      <ScrollAnimation animateIn="animate__rubberBand">
+      <ScrollAnimation animateIn="animate__pulse">
         <div className="container">
           <Swiper
             effect={'coverflow'}
@@ -83,7 +83,7 @@ const Skill = () => {
           </h2>
 
           {/* Frontend */}
-          <ScrollAnimation animateIn="animate__lightSpeedInRight">
+          <ScrollAnimation animateIn="animate__pulse">
             <ul className="grid grid-cols-2 md:grid-cols-5 text-xl gap-4 py-5 mt-4">
               <li>
                 <a href="">
@@ -134,7 +134,7 @@ const Skill = () => {
           <h2>
             <span className="font-bold text-3xl">Backend:</span>
           </h2>
-          <ScrollAnimation animateIn="animate__lightSpeedInLeft">
+          <ScrollAnimation animateIn="animate__pulse">
             <ul className="grid grid-cols-2 md:grid-cols-5 text-xl gap-4 py-5 mt-4">
               <li>
                 <a href="">

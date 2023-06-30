@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
 import SectionTitle from "../../components/SectionTile/SectionTitle";
 import { Helmet } from "react-helmet-async";
+import  ScrollAnimation  from 'react-animate-on-scroll';
 
 const ContactMe = () => {
   const form = useRef();
@@ -67,6 +68,7 @@ const ContactMe = () => {
         <h2 className="text-3xl font-bold text-center mb-8 text-white">Contact</h2>
         <div className="mx-auto">
           <div className="p-8 max-w-xl mx-auto">
+          <ScrollAnimation animateIn="animate__pulse">
             <form ref={form} onSubmit={sendEmail}>
               <div className="mb-4">
                 <label htmlFor="name" className="block font-bold text-white mb-2">
@@ -117,6 +119,7 @@ const ContactMe = () => {
                 Send Email
               </button>
             </form>
+            </ScrollAnimation>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import  ScrollAnimation  from 'react-animate-on-scroll';
 
 const Footer = () => {
   return (
-    <ScrollAnimation animateIn="animate__backInDown">
+    <ScrollAnimation animateIn="animate__pulse">
       
      <footer className="bg-gradient-to-b from-gray-800 black">
       <div className="py-10 text-center">

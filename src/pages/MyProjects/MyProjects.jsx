@@ -20,7 +20,7 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
         <ScrollAnimation animateIn="animate__pulse">
           <div className="box-cover box rounded-lg"></div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="animate__fadeInDown">
+        <ScrollAnimation animateIn="animate__pulse">
           <div className="card lg:card-side  shadow-xl">
             <div className={`card-body rounded-xl ${themeClass}`}>
               <div>
@@ -104,10 +104,10 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
    
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10 items-center">
-        <ScrollAnimation animateIn="animate__zoomIn">
+        <ScrollAnimation animateIn="animate__pulse">
           <div className="box-cover box1 rounded-lg"></div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="animate__fadeIn">
+        <ScrollAnimation animateIn="animate__pulse">
           <div className="card lg:card-side  shadow-xl">
           <div className={`card-body rounded-xl ${themeClass}`}>
               <div>
@@ -180,10 +180,10 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
  
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <ScrollAnimation animateIn="animate__heartBeat">
+        <ScrollAnimation animateIn="animate__pulse">
           <div className="box-cover box2 rounded-lg"></div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="animate__fadeInUp">
+        <ScrollAnimation animateIn="animate__pulse">
           <div className="card lg:card-side  shadow-xl">
           <div className={`card-body rounded-xl ${themeClass}`}>
               <div>

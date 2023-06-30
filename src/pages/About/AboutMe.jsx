@@ -17,7 +17,7 @@ const AboutMe = () => {
       <SectionTitle subHeading={"About Me"}></SectionTitle>
    
 
-      <ScrollAnimation animateIn="animate__headShake">
+      <ScrollAnimation animateIn="animate__pulse">
 
         <div className="img-sec flex justify-center">
           <img
