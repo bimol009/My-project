@@ -123,7 +123,7 @@ const Skill = () => {
               <li>
                 <a href="">
                   <span className="rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
-                    Bootstrap CSS
+                    Bootstrap
                   </span>
                 </a>
               </li>
