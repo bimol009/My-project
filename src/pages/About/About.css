@@ -1,20 +1,20 @@
 .img-sec img {
-    background: linear-gradient(to right, #fce6f5, #c7e8ff);
-	border-radius: 12rem 12rem 4rem 4rem;
+    /* background: linear-gradient(to right, #fce6f5, #c7e8ff); */
+	border-radius: 12rem 12rem 0 0;
 	height: 30rem;
 	overflow: hidden;
 	margin-top: 4rem;
-	margin-bottom: 4rem;
+
 	box-shadow: 2px 5px 10px #000;
 
 }
 
 .ptag{
    
-    background: linear-gradient(to right, #fce6f5, #c7e8ff);
+    /* background: linear-gradient(to right, #fce6f5, #c7e8ff); */
     border-radius: 10px;
-    width: 80%;
-    margin: 0 auto;
+   
+
     line-height: 60px;
     
 }

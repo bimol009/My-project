@@ -8,11 +8,11 @@ import { Helmet } from "react-helmet-async";
 const Home = () => {
   
   return (
-    <div>
+    <div className="px-1">
         <Helmet>
           <title>MY PORTFOLIO</title>
         </Helmet>
-      <div className="container mx-auto">
+      <div>
         <Banner></Banner>
         <AboutMe></AboutMe>
         <Skill></Skill>

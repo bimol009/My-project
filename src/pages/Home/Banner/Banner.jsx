@@ -18,7 +18,7 @@ const Banner = () => {
   return (
     <div id="banner">
       <ParticlesBackground></ParticlesBackground>
-      <div className="banner-section pt-28 py-5 rounded ">
+      <div className="banner-section pt-28 py-5 rounded">
         <div className="banner-content grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center items-center">
           <div className="content-part text-center">
             <h1 className="static-part text-6xl font-bold  mb-2">
@@ -42,13 +42,13 @@ const Banner = () => {
             <div className="hire flex justify-center items-center mt-5">
               <Link to="/contactMe">
               
-                <button className="btn btn-active btn-neutral mr-2">
+                <button className="btn btn-outline btn-info mr-2">
                   <a href="">HIRE ME</a>
                 </button>
               </Link>
             
                 <h2 className="text-3xl font-bold">
-                  <a href={CV}download className="btn btn-active btn-neutral">My Resume</a>
+                  <a href={CV}download className="btn btn-outline btn-info">My Resume</a>
                 </h2>
             
             </div>

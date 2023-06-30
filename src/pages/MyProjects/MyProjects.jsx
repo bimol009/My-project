@@ -1,32 +1,34 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import SectionTitle from "../../components/SectionTile/SectionTitle";
 import ScrollAnimation from "react-animate-on-scroll";
 import "./MyProject.css";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const MyProjects = () => {
+  const { darkTheme } = useContext(AuthContext);
+const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
+  
   return (
-    <div className=" rounded-lg" id="project">
+    <div className="rounded-lg" id="project">
       <div className="">
         <SectionTitle subHeading={"My Projects Section"}></SectionTitle>
       </div>
       {/* First Project */}
-      <div className="py-5">
-        <SectionTitle subHeading={"My First Projects"}></SectionTitle>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 items-center">
+    
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-4 items-center">
         <ScrollAnimation animateIn="animate__backInLeft">
           <div className="box-cover box rounded-lg"></div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="animate__backInRight">
           <div className="card lg:card-side  shadow-xl">
-            <div className="card-body">
+            <div className={`card-body rounded-xl ${themeClass}`}>
               <div>
-                <h1 className="text-3xl font-bold text-center mb-5">
+                <h1 className="text-3xl font-bold text-center  mb-5">
                   My Projects Summary
                 </h1>
-                <h1 className="text-2xl font-bold">
-                  SCAMP (Summer Camp Project Site){" "}
+                <h1 className={`text-2xl font-bold text-center py-2`}>
+                  SCAMP (Summer Camp Project Site)
                   <Link to="https://summer-project-737c4.web.app/">
                     <span className="text-blue-500">Visit</span>
                   </Link>
@@ -39,7 +41,7 @@ const MyProjects = () => {
                     <span className="text-blue-500">Server</span>
                   </Link>
                 </h1>
-                <div className=" text-2xl">
+                <div className={'text-2xl'}>
                   <p>
                     1. Academy of dance login website having features like
                     Payment System, using sort, available seat define, Add to
@@ -53,41 +55,41 @@ const MyProjects = () => {
                     are used. The website is also mobile responsive.
                   </p>
                 </div>
-                <h3 className="text-5xl">
+                <h3 className="text-3xl bg-slate-700 rounded-lg text-center text-white">
                   <span className="font-bold">TECHNOLOGY</span>:
                   </h3>
                  <div className="technoloy">
                  <ul className="grid grid-cols-2 md:grid-cols-5 text-xl gap-4 mt-4">
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">React</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>React</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">Node.js</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>Node.js</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">MongoBD</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>MongoBD</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">CSS</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>CSS</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">APIs</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>APIs</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">Axios</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>Axios</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">Express</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>Express</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">JWT</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>JWT</span></a>
                   </li>
                   <li>
                   
-                    <span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">Firebase</span>
+                    <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>Firebase</span>
                   </li>
                   <li>
-                    <span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">Stripe</span>
+                    <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>Stripe</span>
                   </li>
                   </ul>
                  </div>
@@ -99,23 +101,21 @@ const MyProjects = () => {
       </div>
 
       {/* Second Project */}
-      <div className="py-5">
-        <SectionTitle subHeading={"My Second Projects"}></SectionTitle>
-      </div>
+   
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10 items-center">
         <ScrollAnimation animateIn="animate__backInDown">
           <div className="box-cover box1 rounded-lg"></div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="animate__backInUp">
           <div className="card lg:card-side  shadow-xl">
-            <div className="card-body">
+          <div className={`card-body rounded-xl ${themeClass}`}>
               <div>
                 <h1 className="text-3xl font-bold text-center mb-5">
                   My Projects Summary
                 </h1>
-                <h1 className="text-2xl font-bold">
-                  TOY PRODUCT (A website to buy toy){" "}
+                <h1 className="text-2xl font-bold text-center  py-3">
+                  TOY PRODUCT (A website to buy toy)
                   <Link to="https://toy-web-client.web.app/">
                     <span className="text-blue-500">Visit</span>
                   </Link>
@@ -141,32 +141,32 @@ const MyProjects = () => {
                     site using.
                   </p>
                 </div>
-                <h3 className="text-4xl">
+                <h3 className="text-3xl bg-slate-700 rounded-lg text-center text-white">
                   <span className="font-bold">TECHNOLOGY</span>:
              
                 </h3>
                 <div className="technoloy">
                  <ul className="grid grid-cols-2 md:grid-cols-5 text-xl gap-4 mt-4">
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">React</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>React</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">Node.js</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>Node.js</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">MongoBD</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>MongoBD</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">CSS</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>CSS</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">APIs</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>APIs</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">Axios</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>Axios</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">Express</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>Express</span></a>
                   </li>
                   </ul>
                  </div>
@@ -177,9 +177,7 @@ const MyProjects = () => {
       </div>
 
       {/* Third Project */}
-      <div className="py-5">
-        <SectionTitle subHeading={"My Third Projects"}></SectionTitle>
-      </div>
+ 
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <ScrollAnimation animateIn="animate__backInLeft">
@@ -187,12 +185,12 @@ const MyProjects = () => {
         </ScrollAnimation>
         <ScrollAnimation animateIn="animate__backInRight">
           <div className="card lg:card-side  shadow-xl">
-            <div className="card-body">
+          <div className={`card-body rounded-xl ${themeClass}`}>
               <div>
-                <h1 className="text-3xl font-bold text-center mb-5">
+                <h1 className="text-3xl font-bold text-center  mb-5">
                   My Projects Summary
                 </h1>
-                <h1 className="text-2xl font-bold">
+                <h1 className="text-2xl font-bold text-center py-1">
                   FOOD RECIPE WEB (A website for food recipes){" "}
                   <Link to="https://food-recipe-assign.web.app/">
                     <span className="text-blue-500">Visit</span>
@@ -213,34 +211,34 @@ const MyProjects = () => {
                     login and registration functionality.
                   </p>
                 </div>
-                <h3 className="text-4xl">
+                <h3 className="text-3xl bg-slate-700 rounded-lg text-center text-white">
                   <span className="font-bold">TECHNOLOGY</span>: 
                 </h3>
                 <div className="technoloy">
                  <ul className="grid grid-cols-2 md:grid-cols-5 text-xl gap-4 mt-4">
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">React</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>React</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">Node.js</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>Node.js</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">MongoBD</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>MongoBD</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">CSS</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>CSS</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">RestAPIs</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>RestAPIs</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">Tailwind</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>Tailwind</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">Express</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>Express</span></a>
                   </li>
                   <li>
-                    <a href=""><span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">daisyUI</span></a>
+                    <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>daisyUI</span></a>
                   </li>
                 
                   </ul>

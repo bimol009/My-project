@@ -3,12 +3,13 @@
 
 .img-part img {
     width: 100%;
-    background: linear-gradient(to right, #fce6f5, #c7e8ff);
 	border-radius: 10px;
-	height: 30rem;
-	overflow: hidden;
-	margin-top: 4rem;
-	margin-bottom: 4rem;
+	
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+
+	
 	box-shadow: 2px 5px 10px #000;
+
 
 }

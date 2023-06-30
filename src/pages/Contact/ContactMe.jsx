@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
 import SectionTitle from "../../components/SectionTile/SectionTitle";
+import { Helmet } from "react-helmet-async";
 
 const ContactMe = () => {
   const form = useRef();
@@ -51,8 +52,12 @@ const ContactMe = () => {
 
   return (
     <section id="contact" className="py-12">
+      <Helmet>
+          <title>MY PORTFOLIO | CONTACT</title>
+          <link rel="canonical" href="https://www.tacobell.com/" />
+        </Helmet>
       <div className="pt-10">
-      <SectionTitle subHeading={"Contact Me"}></SectionTitle>
+      <SectionTitle heading={"Contact Me"}></SectionTitle>
       </div>
       <div className="grid grid-cols-1">
         <div className="img-section-con flex justify-center items-center">

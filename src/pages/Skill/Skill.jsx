@@ -122,28 +122,28 @@ const Skill = () => {
             <ul className="grid grid-cols-2 md:grid-cols-5 text-xl gap-4 py-5 mt-4">
               <li>
                 <a href="">
-                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">
+               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
                     Html
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">
+               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
                     CSS
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">
+               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
                     Javascrpt
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">
+               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
                     ReactJs
                   </span>
                 </a>
@@ -151,14 +151,14 @@ const Skill = () => {
 
               <li>
                 <a href="">
-                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">
+               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
                     TailwindCss
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">
+               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
                     BootsTrapCss
                   </span>
                 </a>
@@ -174,28 +174,28 @@ const Skill = () => {
             <ul className="grid grid-cols-2 md:grid-cols-5 text-xl gap-4 py-5 mt-4">
               <li>
                 <a href="">
-                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">
+               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
                     NodeJs
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">
+               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
                     Express
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">
+               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
                     Mongodb
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">
+               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
                     JWT
                   </span>
                 </a>
@@ -203,7 +203,7 @@ const Skill = () => {
 
               <li>
                 <a href="">
-                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg px-4 py-2 mt-5 text-white font-bold items-center text-center">
+               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
                     Firebase
                   </span>
                 </a>
@@ -217,10 +217,3 @@ const Skill = () => {
 };
 
 export default Skill;
-
-
-
-
-
-
-
