@@ -1,16 +1,15 @@
-
-import { useContext, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
-import Swal from 'sweetalert2';
-import { AuthContext } from '../../Provider/AuthProvider';
-import { Link } from 'react-router-dom';
-import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
-
+import { useContext, useState } from "react";
+import { useForm } from "react-hook-form";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { Link } from "react-router-dom";
+import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
-  const { createUserEmailPass,createdProfile } = useContext(AuthContext);
+  const { createUserEmailPass, createdProfile } = useContext(AuthContext);
   const navigate = useNavigate();
   const {
     register,
@@ -33,11 +32,15 @@ const Register = () => {
   const onSubmit = (data) => {
     createUserEmailPass(data.email, data.password).then((result) => {
       const loggeUser = result.user;
- 
 
       createdProfile(data.name, data.photoURL)
         .then(() => {
-          const savedUser = { name: data.name, email: data.email,photoURL: data.photoURL,role:"student" };
+          const savedUser = {
+            name: data.name,
+            email: data.email,
+            photoURL: data.photoURL,
+            role: "student",
+          };
           fetch("https://summer-camp-server-livid.vercel.app/users", {
             method: "POST",
             headers: {
@@ -60,9 +63,7 @@ const Register = () => {
               }
             });
         })
-        .catch((error) => {
-    
-        });
+        .catch((error) => {});
     });
     if (data.password !== data.confirm) {
       Swal.fire({
@@ -78,7 +79,9 @@ const Register = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen pt-20">
- 
+      <Helmet>
+        <title>MY PORTFOLIO |REGISTRATION</title>
+      </Helmet>
       <div className="max-w-md w-full mx-auto">
         <h1 className="text-3xl font-bold text-center mb-6">Register now!</h1>
         <form

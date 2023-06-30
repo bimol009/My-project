@@ -3,11 +3,15 @@ import AboutMe from "../../About/AboutMe";
 import Contact from "../../Contact/Contact";
 import MyProjects from "../../MyProjects/MyProjects";
 import Skill from "../../Skill/Skill";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   
   return (
     <div>
+        <Helmet>
+          <title>MY PORTFOLIO</title>
+        </Helmet>
       <div className="container mx-auto">
         <Banner></Banner>
         <AboutMe></AboutMe>

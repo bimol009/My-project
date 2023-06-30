@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import './About.css'
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   const navHandler = () => {
@@ -16,7 +17,10 @@ const About = () => {
   return (
     <div className="grid grid-cols-1 items-center bg-black mb-5 pt-20 ">
       <SectionTitle subHeading={"About Me"}></SectionTitle>
-    
+      <Helmet>
+          <title>MY PORTFOLIO | ABOUT ME</title>
+          <link rel="canonical" href="https://www.tacobell.com/" />
+        </Helmet>
   
         <div className="img-sec flex justify-center pb-10">
           <img

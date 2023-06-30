@@ -1,13 +1,13 @@
-
-import { useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { useContext, useState } from 'react';
-import { AuthContext } from '../../Provider/AuthProvider';
-import { useForm } from 'react-hook-form';
-import Swal from 'sweetalert2';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -24,11 +24,11 @@ const Login = () => {
 
   const handleLogin = (data) => {
     const { email, password } = data;
-  
+
     signIn(email, password)
       .then((result) => {
         const user = result.user;
-     
+
         Swal.fire({
           position: "top-end",
           icon: "success",
@@ -39,7 +39,6 @@ const Login = () => {
         navigate("/");
       })
       .catch((error) => {
-    
         Swal.fire({
           position: "top-end",
           icon: "error",
@@ -56,8 +55,10 @@ const Login = () => {
   };
 
   return (
-    <div id='login' className="flex items-center justify-center min-h-screen">
-
+    <div id="login" className="flex items-center justify-center min-h-screen">
+      <Helmet>
+        <title>MY PORTFOLIO | LOGIN</title>
+      </Helmet>
       <div className="w-full max-w-md">
         <h1 className="text-3xl font-bold text-center mb-8">Login now!</h1>
         <form
