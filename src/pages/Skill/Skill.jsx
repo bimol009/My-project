@@ -43,25 +43,25 @@ const Skill = () => {
       
       >
         <SwiperSlide>
-          <img src="https://i.ibb.co/J7dYDz4/img-7.jpg" alt="slide_image" />
+          <img src="https://i.ibb.co/q59PggP/2400-1260-rw-blog-node-js.png" alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/WvtCqgd/img-6.jpg" alt="slide_image" />
+          <img src="https://i.ibb.co/c2MxRL1/19199360.jpg" alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/9Gbn70K/img-5.jpg" alt="slide_image" />
+          <img src="https://i.ibb.co/LZjt2RP/javascript-logo.png" alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/5G1c7pG/img-4.jpg" alt="slide_image" />
+          <img src="https://i.ibb.co/WKwx633/download-2.png" alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/bsThN89/img-2.jpg" alt="slide_image" />
+          <img src="https://i.ibb.co/rpLYszg/image-blog-openlogic-what-is-mongodb.png" alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/C6mrH5J/img-3.jpg" alt="slide_image" />
+          <img src="https://i.ibb.co/pZM4FbV/tail.png" alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/28PqKJK/img-1.jpg" alt="slide_image" />
+          <img src="https://i.ibb.co/DKGZR39/Json-web-token.jpg" alt="slide_image" />
         </SwiperSlide>
 
         <div className="slider-controler">
