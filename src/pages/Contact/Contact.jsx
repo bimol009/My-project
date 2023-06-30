@@ -4,7 +4,7 @@ import SectionTitle from "../../components/SectionTile/SectionTitle";
 import Swal from "sweetalert2";
 import  emailjs  from '@emailjs/browser';
 import { Helmet } from "react-helmet-async";
-import  ScrollAnimation  from 'react-animate-on-scroll';
+
 
 const Contact = () => {
   const form = useRef();
@@ -63,7 +63,7 @@ const Contact = () => {
       <div className="container mx-auto">
         <SectionTitle subHeading="Get in touch with us" />
         <div className="max-w-xl mx-auto rounded-lg shadow-md py-8 px-6">
-        <ScrollAnimation animateIn="animate__pulse">
+  
             <form ref={form} onSubmit={sendEmail}>
               <div className="mb-4">
                 <label htmlFor="name" className="block font-bold text-white mb-2">
@@ -114,7 +114,7 @@ const Contact = () => {
                 Send Email
               </button>
             </form>
-            </ScrollAnimation>
+    
         </div>
       </div>
     </section>

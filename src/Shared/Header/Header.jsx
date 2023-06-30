@@ -1,5 +1,5 @@
-import { FaBars, FaLightbulb, FaRegLightbulb } from "react-icons/fa";
-import { useContext } from "react";
+import { FaBars, FaLightbulb, FaMoon, FaRegLightbulb, FaSun } from "react-icons/fa";
+import { useContext, useState } from "react";
 import "./Header.css";
 
 import { useLocation } from "react-router-dom";
@@ -9,6 +9,11 @@ import { Link } from "react-scroll";
 const Header = () => {
   const { darkTheme, setDarkTheme } = useContext(AuthContext);
   const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   const toggleTheme = () => {
     setDarkTheme((theme) => !theme);
@@ -80,26 +85,34 @@ const Header = () => {
         {location.pathname === "/" && (
           <Link
             onClick={toggleTheme}
-            className=" font-bold text-base text-black mr-6"
+            className=" font-bold text-base text-black mr-6 cursor-pointer"
           >
             {darkTheme ? (
-              <FaRegLightbulb size={30} />
+              <FaSun size={30} />
             ) : (
-              <FaLightbulb size={30} />
+              <FaMoon size={30} />
             )}
           </Link>
         )}
 
-        <div className="dropdown dropdown-end block md:hidden cursor-pointer text-2xl font-bold text-black">
-          <label tabIndex={0} className="btn">
-            <FaBars />
-          </label>
+<div className="dropdown dropdown-end cursor-pointer text-2xl font-bold text-black">
+          <label tabIndex={0}>
+          <div className="relative">
+      <button
+        className="flex items-center px-4 py-2 space-x-2 text-gray-800 bg-gray-200 rounded hover:bg-gray-300 focus:bg-gray-300 focus:outline-none md:hidden"
+        onClick={toggleMenu}
+      >
+        <span><FaBars/></span>
 
-          <div className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-96">
-            <ul>
-            {header}
-            </ul>
-          </div>
+      </button>
+      {isOpen && (
+        <ul className="absolute rounded-lg cursor-pointer right-0 px-5 z-10 mt-2 space-y-2 bg-gradient-to-b from-white via-gray-100 to-gray-200 border border-gray-200 shadow-md w-52 sm:w-auto">
+          {header}
+        </ul>
+      )}
+    </div>
+      
+          </label>
         </div>
       </div>
     </div>

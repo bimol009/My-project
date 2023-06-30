@@ -3,64 +3,92 @@ import SectionTitle from "./../../components/SectionTile/SectionTitle";
 import "./Skill.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper';
+import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import { Link } from "react-scroll/modules";
 
 const Skill = () => {
   return (
     <div>
-      <div className="mb-10">
+      <div>
         <SectionTitle subHeading="My Skill" />
       </div>
       <ScrollAnimation animateIn="animate__pulse">
         <div className="container">
           <Swiper
-            effect={'coverflow'}
+            effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
             loop={true}
-            slidesPerView={'auto'}
+            slidesPerView={"auto"}
             coverflowEffect={{
               rotate: 0,
               stretch: 0,
               depth: 100,
               modifier: 2.5,
             }}
-            pagination={{ el: '.swiper-pagination', clickable: true }}
+            pagination={{ el: ".swiper-pagination", clickable: true }}
             navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
               clickable: true,
             }}
             modules={[EffectCoverflow, Pagination, Navigation]}
             className="swiper_container"
           >
             <SwiperSlide>
-              <img src="https://i.ibb.co/q59PggP/2400-1260-rw-blog-node-js.png" alt="slide_image" />
+              <img
+                src="https://i.ibb.co/q59PggP/2400-1260-rw-blog-node-js.png"
+                alt="slide_image"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://i.ibb.co/c2MxRL1/19199360.jpg" alt="slide_image" className="rounded-t-lg" />
+              <img
+                src="https://i.ibb.co/c2MxRL1/19199360.jpg"
+                alt="slide_image"
+                className="rounded-t-lg"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://i.ibb.co/LZjt2RP/javascript-logo.png" alt="slide_image" className="rounded-t-lg" />
+              <img
+                src="https://i.ibb.co/LZjt2RP/javascript-logo.png"
+                alt="slide_image"
+                className="rounded-t-lg"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://i.ibb.co/WKwx633/download-2.png" alt="slide_image" className="rounded-t-lg" />
+              <img
+                src="https://i.ibb.co/WKwx633/download-2.png"
+                alt="slide_image"
+                className="rounded-t-lg"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://i.ibb.co/rpLYszg/image-blog-openlogic-what-is-mongodb.png" alt="slide_image" className="rounded-t-lg" />
+              <img
+                src="https://i.ibb.co/rpLYszg/image-blog-openlogic-what-is-mongodb.png"
+                alt="slide_image"
+                className="rounded-t-lg"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://i.ibb.co/pZM4FbV/tail.png" alt="slide_image" className="rounded-t-lg" />
+              <img
+                src="https://i.ibb.co/pZM4FbV/tail.png"
+                alt="slide_image"
+                className="rounded-t-lg"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://i.ibb.co/DKGZR39/Json-web-token.jpg" alt="slide_image" className="rounded-t-lg" />
+              <img
+                src="https://i.ibb.co/DKGZR39/Json-web-token.jpg"
+                alt="slide_image"
+                className="rounded-t-lg"
+              />
             </SwiperSlide>
 
             <div className="slider-controler">
@@ -116,7 +144,7 @@ const Skill = () => {
               <li>
                 <a href="">
                   <span className="rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
-                    Tailwind CSS
+                    Tailwind
                   </span>
                 </a>
               </li>
@@ -133,6 +161,7 @@ const Skill = () => {
           {/* Backend */}
           <h2>
             <span className="font-bold text-3xl">Backend:</span>
+            
           </h2>
           <ScrollAnimation animateIn="animate__pulse">
             <ul className="grid grid-cols-2 md:grid-cols-5 text-xl gap-4 py-5 mt-4">
@@ -174,6 +203,18 @@ const Skill = () => {
             </ul>
           </ScrollAnimation>
         </div>
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          className="text-lg text-black  flex justify-center py-10"
+        >
+          <a href="">
+            <span className="rounded-full px-5 py-2.5 text-3xl mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
+              Hire Me
+            </span>
+          </a>
+        </Link>
       </div>
     </div>
   );
