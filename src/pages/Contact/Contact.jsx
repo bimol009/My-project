@@ -13,12 +13,12 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        form.current,
-        "YOUR_USER_ID"
-      )
+    .sendForm(
+      "service_y2zdjfp",
+      "template_9116a9q",
+      form.current,
+      "jhKkGj9txNQb03tOI"
+    )
       .then(
         (result) => {
           console.log(result.text);
