@@ -52,42 +52,42 @@ const Skill = () => {
               <img
                 src="https://i.ibb.co/c2MxRL1/19199360.jpg"
                 alt="slide_image"
-                className="rounded-t-lg"
+            
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src="https://i.ibb.co/LZjt2RP/javascript-logo.png"
                 alt="slide_image"
-                className="rounded-t-lg"
+             
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src="https://i.ibb.co/WKwx633/download-2.png"
                 alt="slide_image"
-                className="rounded-t-lg"
+             
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src="https://i.ibb.co/rpLYszg/image-blog-openlogic-what-is-mongodb.png"
                 alt="slide_image"
-                className="rounded-t-lg"
+               
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src="https://i.ibb.co/pZM4FbV/tail.png"
                 alt="slide_image"
-                className="rounded-t-lg"
+              
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src="https://i.ibb.co/DKGZR39/Json-web-token.jpg"
                 alt="slide_image"
-                className="rounded-t-lg"
+              
               />
             </SwiperSlide>
 
@@ -207,7 +207,7 @@ const Skill = () => {
           to="contact"
           spy={true}
           smooth={true}
-          className="text-lg text-black  flex justify-center py-10"
+          className="text-lg flex justify-center py-10"
         >
           <a href="">
             <span className="rounded-full px-5 py-2.5 text-3xl mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
