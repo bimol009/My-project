@@ -20,101 +20,66 @@ const Skill = () => {
       </div>
       <ScrollAnimation animateIn="animate__rubberBand">
         <div className="container">
-        <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        }}
-        pagination={{ el: '.swiper-pagination', clickable: true }}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
-      
-      >
-        <SwiperSlide>
-          <img src="https://i.ibb.co/q59PggP/2400-1260-rw-blog-node-js.png" alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://i.ibb.co/c2MxRL1/19199360.jpg" alt="slide_image" className="rounded-t-lg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://i.ibb.co/LZjt2RP/javascript-logo.png" alt="slide_image" className="rounded-t-lg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://i.ibb.co/WKwx633/download-2.png" alt="slide_image" className="rounded-t-lg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://i.ibb.co/rpLYszg/image-blog-openlogic-what-is-mongodb.png" alt="slide_image" className="rounded-t-lg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://i.ibb.co/pZM4FbV/tail.png" alt="slide_image" className="rounded-t-lg"/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://i.ibb.co/DKGZR39/Json-web-token.jpg" alt="slide_image" className="rounded-t-lg" />
-        </SwiperSlide>
+          <Swiper
+            effect={'coverflow'}
+            grabCursor={true}
+            centeredSlides={true}
+            loop={true}
+            slidesPerView={'auto'}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 2.5,
+            }}
+            pagination={{ el: '.swiper-pagination', clickable: true }}
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+              clickable: true,
+            }}
+            modules={[EffectCoverflow, Pagination, Navigation]}
+            className="swiper_container"
+          >
+            <SwiperSlide>
+              <img src="https://i.ibb.co/q59PggP/2400-1260-rw-blog-node-js.png" alt="slide_image" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://i.ibb.co/c2MxRL1/19199360.jpg" alt="slide_image" className="rounded-t-lg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://i.ibb.co/LZjt2RP/javascript-logo.png" alt="slide_image" className="rounded-t-lg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://i.ibb.co/WKwx633/download-2.png" alt="slide_image" className="rounded-t-lg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://i.ibb.co/rpLYszg/image-blog-openlogic-what-is-mongodb.png" alt="slide_image" className="rounded-t-lg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://i.ibb.co/pZM4FbV/tail.png" alt="slide_image" className="rounded-t-lg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://i.ibb.co/DKGZR39/Json-web-token.jpg" alt="slide_image" className="rounded-t-lg" />
+            </SwiperSlide>
 
-        <div className="slider-controler">
-          <div className="swiper-button-prev slider-arrow">
-            <ion-icon name="arrow-back-outline"></ion-icon>
-          </div>
-          <div className="swiper-button-next slider-arrow">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
-          <div className="swiper-pagination"></div>
-        </div>
-      </Swiper>
+            <div className="slider-controler">
+              <div className="swiper-button-prev slider-arrow">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+              </div>
+              <div className="swiper-button-next slider-arrow">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </div>
+              <div className="swiper-pagination"></div>
+            </div>
+          </Swiper>
         </div>
       </ScrollAnimation>
-      {/* <ScrollAnimation animateIn="animate__rubberBand">
-        <div className="skill-slide">
-          <span style={{ "--i": 1 }}>
-            <img
-              src="https://i.ibb.co/q59PggP/2400-1260-rw-blog-node-js.png"
-              alt=""
-            />
-          </span>
-          <span style={{ "--i": 2 }}>
-            <img src="https://i.ibb.co/c2MxRL1/19199360.jpg" alt="" />
-          </span>
-          <span style={{ "--i": 3 }}>
-            <img src="https://i.ibb.co/LZjt2RP/javascript-logo.png" alt="" />
-          </span>
-          <span style={{ "--i": 4 }}>
-            <img src="https://i.ibb.co/WKwx633/download-2.png" alt="" />
-          </span>
-          <span style={{ "--i": 5 }}>
-            <img src="https://i.ibb.co/gTWTh9H/HTML-CSS-Review.png" alt="" />
-          </span>
-          <span style={{ "--i": 6 }}>
-            <img
-              src="https://i.ibb.co/rpLYszg/image-blog-openlogic-what-is-mongodb.png"
-              alt=""
-            />
-          </span>
-          <span style={{ "--i": 7 }}>
-            <img src="https://i.ibb.co/pZM4FbV/tail.png" alt="" />
-          </span>
-          <span style={{ "--i": 8 }}>
-            <img src="https://i.ibb.co/DKGZR39/Json-web-token.jpg" alt="" />
-          </span>
-        </div>
-      </ScrollAnimation> */}
 
       <div className="technology">
         <div className="my-skill px-10">
           <h2>
-            <span className="font-bold text-3xl">frontent :</span>
+            <span className="font-bold text-3xl">Frontend:</span>
           </h2>
 
           {/* Frontend */}
@@ -122,44 +87,43 @@ const Skill = () => {
             <ul className="grid grid-cols-2 md:grid-cols-5 text-xl gap-4 py-5 mt-4">
               <li>
                 <a href="">
-               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
-                    Html
+                  <span className="rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
+                    HTML
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
+                  <span className="rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
                     CSS
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
-                    Javascrpt
+                  <span className="rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
+                    JavaScript
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
-                    ReactJs
-                  </span>
-                </a>
-              </li>
-
-              <li>
-                <a href="">
-               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
-                    TailwindCss
+                  <span className="rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
+                    React.js
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
-                    BootsTrapCss
+                  <span className="rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
+                    Tailwind CSS
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span className="rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
+                    Bootstrap CSS
                   </span>
                 </a>
               </li>
@@ -168,42 +132,41 @@ const Skill = () => {
 
           {/* Backend */}
           <h2>
-            <span className="font-bold text-3xl">Backend :</span>
+            <span className="font-bold text-3xl">Backend:</span>
           </h2>
           <ScrollAnimation animateIn="animate__lightSpeedInLeft">
             <ul className="grid grid-cols-2 md:grid-cols-5 text-xl gap-4 py-5 mt-4">
               <li>
                 <a href="">
-               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
-                    NodeJs
+                  <span className="rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
+                    Node.js
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
+                  <span className="rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
                     Express
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
-                    Mongodb
+                  <span className="rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
+                    MongoDB
                   </span>
                 </a>
               </li>
               <li>
                 <a href="">
-               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
+                  <span className="rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
                     JWT
                   </span>
                 </a>
               </li>
-
               <li>
                 <a href="">
-               <span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>
+                  <span className="rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white">
                     Firebase
                   </span>
                 </a>

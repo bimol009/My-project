@@ -6,7 +6,7 @@ import CV from './resume.pdf'
 import Typewriter from "typewriter-effect";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import ParticlesBackground from "../../../Particles/particlesBackground";
+
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -17,7 +17,7 @@ const Banner = () => {
 
   return (
     <div id="banner">
-      <ParticlesBackground></ParticlesBackground>
+
       <div className="banner-section pt-28 py-5 rounded">
         <div className="banner-content grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center items-center">
           <div className="content-part text-center">

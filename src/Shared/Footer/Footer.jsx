@@ -6,7 +6,8 @@ import  ScrollAnimation  from 'react-animate-on-scroll';
 const Footer = () => {
   return (
     <ScrollAnimation animateIn="animate__backInDown">
-      <footer className="bg-gradient-to-b from-gray-900 to-black">
+      
+     <footer className="bg-gradient-to-b from-gray-800 black">
       <div className="py-10 text-center">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
           <Link to="/" className="text-white text-lg hover:text-gray-200">
@@ -26,15 +27,15 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="bg-gray-800 py-4">
+      <div className=" py-4 bg-gradient-to-b from-gray-700 to-gray-800">
         <div className="px-8 flex justify-center">
           <a
             href="https://www.facebook.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-gray-200 mr-4"
+            className="text-white hover:text-gray-200 mr-4 "
           >
-            <FaFacebookSquare size={24} />
+            <FaFacebookSquare size={40} />
           </a>
           <a
             href="https://www.linkedin.com/"
@@ -42,7 +43,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-white hover:text-gray-200 mr-4"
           >
-            <FaLinkedin size={24} />
+            <FaLinkedin size={40} />
           </a>
           <a
             href="https://github.com/"
@@ -50,12 +51,12 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-white hover:text-gray-200 mr-4"
           >
-            <FaGithubSquare size={24} />
+            <FaGithubSquare size={40} />
           </a>
         </div>
         <div className="px-8 py-2 text-center">
           <p className="text-white">
-            &copy; 2023 - All rights reserved by Your Name
+            &copy; 2023 - All rights reserved by Bimol
           </p>
         </div>
       </div>
