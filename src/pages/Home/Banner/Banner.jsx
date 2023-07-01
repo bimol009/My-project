@@ -13,9 +13,10 @@ import { Link } from "react-scroll/modules";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Banner = () => {
-  const { darkTheme } = useContext(AuthContext);
+ 
 
-  const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
+
+
   const [state] = useState({
     title: "I am a Mern Stack Developer",
   });
@@ -34,7 +35,7 @@ const Banner = () => {
                 options={{
                   strings: [
                     "BIMOL SARKER",
-                    "a Web Developer",
+                    "A web developer",
                   ],
                   autoStart: true,
                   loop: true,
