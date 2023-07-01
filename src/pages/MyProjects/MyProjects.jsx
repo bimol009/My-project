@@ -10,13 +10,13 @@ const MyProjects = () => {
 const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
   
   return (
-    <div className="rounded-lg" id="project">
+    <div className="rounded-lg container mx-auto" id="project">
       <div className="">
         <SectionTitle subHeading={"My Projects Section"}></SectionTitle>
       </div>
       {/* First Project */}
     
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-4 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 items-center">
         <ScrollAnimation animateIn="animate__pulse">
           <div className="box-cover box rounded-lg"></div>
         </ScrollAnimation>
@@ -24,10 +24,10 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
           <div className="card lg:card-side  shadow-xl">
             <div className={`card-body rounded-xl ${themeClass}`}>
               <div>
-                <h1 className="text-3xl font-bold text-center  mb-5">
+                <h1 className="text-xl font-bold text-center">
                   My Projects Summary
                 </h1>
-                <h1 className={`text-2xl font-bold text-center py-2`}>
+                <h1 className={`text-xl font-bold text-center`}>
                   SCAMP (Summer Camp Project Site)
                   <Link to="https://summer-project-737c4.web.app/">
                     <span className="text-blue-500">Visit</span>
@@ -41,13 +41,13 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
                     <span className="text-blue-500">Server</span>
                   </Link>
                 </h1>
-                <div className={'text-2xl'}>
+                <div className={'text-xl'}>
                   <p>
                     1. Academy of dance login website having features like
                     Payment System, using sort, available seat define, Add to
                     Cart, and Adding Admin, Instructor, and User routes.
                   </p>
-                  <p className="py-2">
+                  <p>
                     2. Payment system is built using the Stripe payment gateway.
                   </p>
                   <p>
@@ -55,11 +55,11 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
                     are used. The website is also mobile responsive.
                   </p>
                 </div>
-                <h3 className="text-3xl bg-slate-700 rounded-lg text-center text-white">
+                <h3 className="text-2xl bg-slate-700 rounded-lg text-center text-white">
                   <span className="font-bold">TECHNOLOGY</span>:
                   </h3>
-                 <div className="technoloy">
-                 <ul className="grid grid-cols-2 md:grid-cols-5 text-xl gap-4 mt-4">
+                 <div className="technoloy text-center">
+                 <ul className="grid grid-cols-2 md:grid-cols-5  gap-4 mt-4">
                   <li>
                     <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>React</span></a>
                   </li>
@@ -111,10 +111,10 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
           <div className="card lg:card-side  shadow-xl">
           <div className={`card-body rounded-xl ${themeClass}`}>
               <div>
-                <h1 className="text-3xl font-bold text-center mb-5">
+                <h1 className="text-xl font-bold text-center">
                   My Projects Summary
                 </h1>
-                <h1 className="text-2xl font-bold text-center  py-3">
+                <h1 className="text-xl font-bold text-center  py-1">
                   TOY PRODUCT (A website to buy toy)
                   <Link to="https://toy-web-client.web.app/">
                     <span className="text-blue-500">Visit</span>
@@ -128,12 +128,12 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
                     <span className="text-blue-500">Server</span>
                   </Link>
                 </h1>
-                <div className="py-6 text-2xl">
+                <div className="py-2 text-2xl">
                   <p>
                     1. It’s a website where users can buy any type of beautiful
                     toy.
                   </p>
-                  <p className="py-2">
+                  <p className="py-1">
                     2. Used MongoDB Database to store user details.
                   </p>
                   <p>
@@ -141,12 +141,12 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
                     site using.
                   </p>
                 </div>
-                <h3 className="text-3xl bg-slate-700 rounded-lg text-center text-white">
+                <h3 className="text-xl bg-slate-700 rounded-lg text-center text-white">
                   <span className="font-bold">TECHNOLOGY</span>:
              
                 </h3>
-                <div className="technoloy">
-                 <ul className="grid grid-cols-2 md:grid-cols-5 text-xl gap-4 mt-4">
+                <div className="technoloy text-center">
+                 <ul className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-4">
                   <li>
                     <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>React</span></a>
                   </li>
@@ -187,10 +187,10 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
           <div className="card lg:card-side  shadow-xl">
           <div className={`card-body rounded-xl ${themeClass}`}>
               <div>
-                <h1 className="text-3xl font-bold text-center  mb-5">
+                <h1 className="text-xl font-bold text-center">
                   My Projects Summary
                 </h1>
-                <h1 className="text-2xl font-bold text-center py-1">
+                <h1 className="text-xl font-bold text-center py-1">
                   FOOD RECIPE WEB (A website for food recipes){" "}
                   <Link to="https://food-recipe-assign.web.app/">
                     <span className="text-blue-500">Visit</span>
@@ -204,18 +204,18 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
                     <span className="text-blue-500">Server</span>
                   </Link>
                 </h1>
-                <div className="py-8 text-2xl">
+                <div className="py-8 text-xl">
                   <p>1. It’s a frontend and backend usable website.</p>
-                  <p className="py-2">
+                  <p className="py-1">
                     2. Used JSON data to store user details and implemented
                     login and registration functionality.
                   </p>
                 </div>
-                <h3 className="text-3xl bg-slate-700 rounded-lg text-center text-white">
+                <h3 className="text-2xl bg-slate-700 rounded-lg text-center text-white">
                   <span className="font-bold">TECHNOLOGY</span>: 
                 </h3>
-                <div className="technoloy">
-                 <ul className="grid grid-cols-2 md:grid-cols-5 text-xl gap-4 mt-4">
+                <div className="technoloy text-center">
+                 <ul className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-4">
                   <li>
                     <a href=""><span className={`rounded-full px-3 py-1.5 mt-5 font-bold items-center text-center border border-blue-500 hover:bg-indigo-500 hover:text-white`}>React</span></a>
                   </li>

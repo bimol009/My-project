@@ -1,6 +1,5 @@
 .box-cover{
-    height: 500px;
-
+    height: 400px;
 
     background-position: top;
     transition: ease-in-out 8s;   
@@ -16,6 +15,7 @@
 .box{
     background: url('https://i.ibb.co/c6pnS5x/Screen-Shot-2023-06-29-at-01-36-40.png');
     background-size: cover;
+    
 
 }
 .box:hover{

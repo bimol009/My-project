@@ -26,11 +26,7 @@ const About = () => {
           <img
               src="https://i.ibb.co/YLh76RD/248672140-237903104922971-3040476626125467773-n-removebg-preview-1.png"
               alt=""
-              style={{
-                height: "auto",
-                width: "100%",
-                maxWidth: "600px"
-              }}
+            
           />
         </div>
   
