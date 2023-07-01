@@ -23,7 +23,7 @@ const AboutMe = () => {
 
         <div className="img-sec flex justify-center">
           <img
-          className={`${themeClass}`}
+
             src="https://i.ibb.co/YLh76RD/248672140-237903104922971-3040476626125467773-n-removebg-preview-1.png"
             alt=""
             style={{
@@ -37,13 +37,13 @@ const AboutMe = () => {
 
       <ScrollAnimation animateIn="fadeIn">
         <p
-          className={`text-xl py-5 px-5 mt-8 text-black ptag ${themeClass}`}
+          className={`text-xl py-5 px-5 mt-8 ptag`}
          
         >
           I'm Bimol Sarkar, and I live in Sakhipur Taktarchala, Tangail. I
           studied Computer Science and Engineering (CSE) in my final semester at
           the National University of Tangail. Right now, I'm getting ready for
-          my final exams coming up in July. <br /> In the last two years, I have
+          my final exams coming up in July. In the last two years, I have
           worked hard to get better at different things. I have given a lot of
           importance to managing my time well, and it has really helped me
           improve my skills. Specifically, I have focused on getting better at
