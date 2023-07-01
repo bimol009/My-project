@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
       </div>
       <div className=" py-4 bg-gradient-to-b from-gray-700 to-gray-800">
-      <div className="px-8 py-2 text-center">
+      <div className="px-8 py-1 text-center">
           <p className="text-blue-500 text-2xl">
             <a href="sarkerbimol@gmail.com">sarkerbimol@gmail.com</a>
           </p>
@@ -101,7 +101,7 @@ const Footer = () => {
             <FaGithubSquare size={40} className="text-gray-400" />
           </a>
         </div>
-        <div className="px-8 py-2 text-center">
+        <div className="px-8 py-1 text-center">
           <p className="text-white text-2xl">
             &copy; 2023 - All rights reserved by Bimol
           </p>

@@ -16,7 +16,7 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
       </div>
       {/* First Project */}
     
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 items-center ">
         <ScrollAnimation animateIn="animate__pulse">
           <div className="box-cover box rounded-lg"></div>
         </ScrollAnimation>
@@ -103,7 +103,7 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
       {/* Second Project */}
    
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10 items-center ">
         <ScrollAnimation animateIn="animate__pulse">
           <div className="box-cover box1 rounded-lg"></div>
         </ScrollAnimation>
@@ -114,7 +114,7 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
                 <h1 className="text-xl font-bold text-center">
                   My Projects Summary
                 </h1>
-                <h1 className="text-xl font-bold text-center  py-1">
+                <h1 className="text-2xl font-bold text-center  py-2">
                   TOY PRODUCT (A website to buy toy)
                   <Link to="https://toy-web-client.web.app/">
                     <span className="text-blue-500">Visit</span>
@@ -128,12 +128,12 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
                     <span className="text-blue-500">Server</span>
                   </Link>
                 </h1>
-                <div className="py-2 text-2xl">
+                <div className="py-8 text-xl">
                   <p>
                     1. It’s a website where users can buy any type of beautiful
                     toy.
                   </p>
-                  <p className="py-1">
+                  <p className="py-2">
                     2. Used MongoDB Database to store user details.
                   </p>
                   <p>
@@ -141,7 +141,7 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
                     site using.
                   </p>
                 </div>
-                <h3 className="text-xl bg-slate-700 rounded-lg text-center text-white">
+                <h3 className="text-2xl bg-slate-700 rounded-lg text-center text-white">
                   <span className="font-bold">TECHNOLOGY</span>:
              
                 </h3>
@@ -179,7 +179,7 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
       {/* Third Project */}
  
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center ">
         <ScrollAnimation animateIn="animate__pulse">
           <div className="box-cover box2 rounded-lg"></div>
         </ScrollAnimation>
