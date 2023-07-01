@@ -5,10 +5,11 @@ import "./Banner.css";
 import CV from './resume.pdf'
 import Typewriter from "typewriter-effect";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import ScrollAnimation from "react-animate-on-scroll";
+import { Link } from "react-scroll/modules";
 
 const Banner = () => {
   const [state] = useState({
@@ -40,7 +41,7 @@ const Banner = () => {
             </div>
 
             <div className="hire flex justify-center items-center mt-5">
-              <Link to="/contactMe">
+              <Link to="/contact">
               
                 <button className="btn btn-outline btn-info mr-2">
                   <a href="">HIRE ME</a>
