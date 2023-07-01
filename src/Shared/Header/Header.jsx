@@ -27,7 +27,12 @@ const Header = () => {
                 Home
                 </Link>
               </li>
-         
+              
+              <li>
+              <Link to="banner" spy={true} smooth={true} className="text-lg text-black hover:text-gray-200">
+                Banner
+              </Link>
+            </li>
 
             <li>
              <Link to="aboutSection" spy={true} smooth={true} className="text-lg text-black hover:text-gray-200">
@@ -36,11 +41,7 @@ const Header = () => {
              </Link>
             </li>
 
-            <li>
-              <Link to="banner" spy={true} smooth={true} className="text-lg text-black hover:text-gray-200">
-                Banner
-              </Link>
-            </li>
+           
             <li>
               <Link to="project" spy={true} smooth={true} className="text-lg text-black hover:text-gray-200">
                 Project
