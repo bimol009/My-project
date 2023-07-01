@@ -61,7 +61,7 @@ const Contact = () => {
           <link rel="canonical" href="https://www.tacobell.com/" />
         </Helmet>
       <div className="container mx-auto">
-        <SectionTitle subHeading="Get in touch with us" />
+        <SectionTitle subHeading="Contact Us" />
         <div className="max-w-xl mx-auto rounded-lg shadow-md py-8 px-6">
   
             <form ref={form} onSubmit={sendEmail}>

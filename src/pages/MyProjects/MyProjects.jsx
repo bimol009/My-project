@@ -12,7 +12,7 @@ const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
   return (
     <div className="rounded-lg container mx-auto" id="project">
       <div className="">
-        <SectionTitle subHeading={"My Projects Section"}></SectionTitle>
+        <SectionTitle subHeading={"My Projects"}></SectionTitle>
       </div>
       {/* First Project */}
     

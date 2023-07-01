@@ -69,7 +69,7 @@ const Header = () => {
       }`}
     >
       <div
-        className="navbar py-8 bg-gradient-to-r from-gray-200 to-white text-black rounded fixed z-10 shadow-md mb-5"
+        className="navbar py-5 px-10 bg-gradient-to-r from-gray-200 to-white text-black rounded fixed z-10 shadow-md mb-5"
         id="navbarSection"
       >
         <div className="nav-title text-3xl font-bold cursor-pointer  me-auto hover:text-gray-200">
