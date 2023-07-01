@@ -13,8 +13,10 @@ const AboutMe = () => {
   const themeClass = darkTheme ? 'dark-theme' : 'white-theme';
 
   return (
-    <div className="grid grid-cols-1 items-center mb-5" id="aboutSection">
+    <div>
       <SectionTitle subHeading={"About Me"}></SectionTitle>
+      <div className="grid grid-cols-1 items-center mb-5" id="aboutSection">
+      
    
 
       <ScrollAnimation animateIn="animate__pulse">
@@ -35,7 +37,7 @@ const AboutMe = () => {
 
       <ScrollAnimation animateIn="fadeIn">
         <p
-          className={`text-3xl py-20 md:px-20 text-center mt-8 text-black ptag ${themeClass}`}
+          className={`text-xl py-5 px-5 mt-8 text-black ptag ${themeClass}`}
          
         >
           I'm Bimol Sarkar, and I live in Sakhipur Taktarchala, Tangail. I
@@ -47,10 +49,11 @@ const AboutMe = () => {
           improve my skills. Specifically, I have focused on getting better at
           React, MongoDB, and JavaScript....
           <Link to="/about">
-            <span className="btn btn-link text-3xl">See More</span>
+            <span className="btn btn-link text-xl">See More</span>
           </Link>
         </p>
       </ScrollAnimation>
+    </div>
     </div>
   );
 };

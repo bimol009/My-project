@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="py-10 text-center">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 ">
         <>
-      <li>
+      <li className="list-none">
         <Link
         
           activeClass="active"
@@ -24,7 +24,7 @@ const Footer = () => {
         </Link>
       </li>
 
-      <li>
+      <li className="list-none">
         <Link
           to="aboutSection"
           spy={true}
@@ -35,7 +35,7 @@ const Footer = () => {
         </Link>
       </li>
 
-      <li>
+      <li className="list-none">
         <Link
           to="banner"
           spy={true}
@@ -45,7 +45,7 @@ const Footer = () => {
           Banner
         </Link>
       </li>
-      <li>
+      <li className="list-none">
         <Link
           to="project"
           spy={true}
@@ -56,7 +56,7 @@ const Footer = () => {
         </Link>
       </li>
 
-      <li>
+      <li className="list-none">
         <Link
           to="contact"
           spy={true}
